@@ -1,8 +1,8 @@
 package com.bezkoder.spring.oracle.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -26,24 +25,21 @@ public class Employee {
 
     private String empName;
     private String job;
-    private Employee manager;
     private Date hideDate;
     private Float salary;
     private byte[] image;
 
     private Department department;
-    private Set<Employee> employees = new HashSet<Employee>(0);
 
     public Employee() {
     }
 
-    public Employee(Long empId, String empName, String job, Employee manager, Date hideDate, Float salary, Float comm,
+    public Employee(Long empId, String empName, String job, Date hideDate, Float salary, Float comm,
                     Department department) {
         this.empId = empId;
         this.empNo = "E" + this.empId;
         this.empName = empName;
         this.job = job;
-        this.manager = manager;
         this.hideDate = hideDate;
         this.salary = salary;
         this.department = department;
@@ -86,16 +82,6 @@ public class Employee {
         this.job = job;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "MNG_ID")
-    public Employee getManager() {
-        return manager;
-    }
-
-    public void setManager(Employee manager) {
-        this.manager = manager;
-    }
-
     @Column(name = "HIRE_DATE", nullable = false)
     @Temporal(TemporalType.DATE)
     public Date getHideDate() {
@@ -125,6 +111,7 @@ public class Employee {
         this.image = image;
     }
 
+    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEPT_ID", nullable = false)
     public Department getDepartment() {
@@ -133,15 +120,6 @@ public class Employee {
 
     public void setDepartment(Department department) {
         this.department = department;
-    }
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "empId")
-    public Set<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(Set<Employee> employees) {
-        this.employees = employees;
     }
 
 }

@@ -1,15 +1,11 @@
 package com.bezkoder.spring.oracle.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "DEPARTMENT", uniqueConstraints = { @UniqueConstraint(columnNames = { "DEPT_NO" }) })
@@ -69,6 +65,8 @@ public class Department {
         this.location = location;
     }
 
+    @JsonManagedReference
+//    @OneToMany(fetch = FetchType.EAGER, mappedBy = "department")
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "department")
     public Set<Employee> getEmployees() {
         return employees;
