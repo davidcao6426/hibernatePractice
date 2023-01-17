@@ -8,6 +8,9 @@ https://docs.jboss.org/hibernate/orm/5.2/javadocs/deprecated-list.html
 https://www.baeldung.com/hibernate-criteria-queries  
 https://docs.google.com/spreadsheets/d/17Dw9ThPsmKiD-LjpUnSm2-HuwAuBYttukfzvjVOTPpY/edit#gid=0  
 
+本專案所需之 DB SQL:  
+https://github.com/davidcao6426/hibernatePractice/tree/master/db  
+
 以下為原 README.md
 
 # Spring Boot, Hibernate, Oracle example: Build CRUD App
