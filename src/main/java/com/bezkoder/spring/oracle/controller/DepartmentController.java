@@ -43,7 +43,7 @@ public class DepartmentController {
 	@GetMapping("/departments/{id}")
 	public ResponseEntity<Department> getDepartmentById(@PathVariable("id") int id) {
 		Optional<Department> departmentData = departmentRepository.findById(id);
-e
+
 		if (departmentData.isPresent()) {
 			Department department = departmentData.get();
 			return new ResponseEntity<>(department, HttpStatus.OK);

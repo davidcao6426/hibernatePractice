@@ -1,0 +1,31 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<!DOCTYPE hibernate-configuration PUBLIC-->
+<!--        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"-->
+<!--        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">-->
+
+<!--<hibernate-configuration>-->
+
+<!--    <session-factory>-->
+<!--        &lt;!&ndash; 顯示實際操作資料庫時的SQL &ndash;&gt;-->
+<!--        <property name="show_sql">true</property>-->
+<!--        &lt;!&ndash; 將顯示的SQL排版，方便觀看 &ndash;&gt;-->
+<!--        <property name="format_sql">true</property>-->
+<!--        &lt;!&ndash; SQL方言，這邊設定的是MySQL &ndash;&gt;-->
+<!--        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>-->
+<!--        &lt;!&ndash; JDBC驅動程式 &ndash;&gt;-->
+<!--        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->
+<!--        &lt;!&ndash; JDBC URL &ndash;&gt;-->
+<!--        <property name="connection.url">jdbc:mysql://localhost/sunbird_test_hibernate</property>-->
+<!--        &lt;!&ndash; 資料庫使用者 &ndash;&gt;-->
+<!--        <property name="connection.username">root</property>-->
+<!--        &lt;!&ndash; 資料庫密碼 &ndash;&gt;-->
+<!--        <property name="connection.password">islab1221</property>-->
+
+<!--        &lt;!&ndash; 物件與資料庫表格映射文件 &ndash;&gt;-->
+<!--        <mapping resource="Department.hbm.xml"/>-->
+
+<!--    </session-factory>-->
+
+
+
+<!--</hibernate-configuration>-->

@@ -1,0 +1,22 @@
+<!--<?xml version = "1.0" encoding = "utf-8"?>-->
+<!--<!DOCTYPE hibernate-mapping PUBLIC-->
+<!--        "-//Hibernate/Hibernate Mapping DTD//EN"-->
+<!--        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">-->
+
+<!--<hibernate-mapping>-->
+<!--    <class name = "com.bezkoder.spring.oracle.model" table = "DEPARTMENT">-->
+
+<!--        <meta attribute = "class-description">-->
+<!--            This class contains the employee detail.-->
+<!--        </meta>-->
+
+<!--        <id name = "deptId" type = "int" column = "id">-->
+<!--            <generator class="native"/>-->
+<!--        </id>-->
+
+<!--        <property name = "deptNo" column = "deptNo" type = "string"/>-->
+<!--        <property name = "deptName" column = "deptName" type = "string"/>-->
+<!--        <property name = "location" column = "location" type = "double"/>-->
+
+<!--    </class>-->
+<!--</hibernate-mapping>-->

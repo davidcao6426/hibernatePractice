@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "com.bezkoder.spring.oracle.model.Employee" table = "employee">
+
+        <meta attribute = "class-description">
+            This class contains the employee detail.
+        </meta>
+
+        <id name = "empId" type = "long" column = "EMP_ID">
+            <generator class="native"/>
+        </id>
+
+        <property name = "empNo" column = "EMP_NO" type = "string"/>
+        <property name = "empName" column = "EMP_NAME" type = "string"/>
+        <property name = "job" column = "JOB" type = "string"/>
+        <property name = "hideDate" column = "HIRE_DATE" type = "date"/>
+        <property name = "salary" column = "SALARY" type = "float"/>
+        <property name = "image" column = "IMAGE" type = "byte"/>
+<!--        <property name = "department" column = "DEPT_ID" type = "int"/>-->
+        <many-to-one name="department"
+                     column="DEPT_ID"
+                     update="false"/>
+
+    </class>
+</hibernate-mapping>

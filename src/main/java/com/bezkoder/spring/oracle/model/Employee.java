@@ -112,7 +112,7 @@ public class Employee {
     }
 
     @JsonBackReference
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER, targetEntity = Department.class)
     @JoinColumn(name = "DEPT_ID", nullable = false)
     public Department getDepartment() {
         return department;
