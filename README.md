@@ -1,3 +1,15 @@
+本專案繼承自 https://github.com/allen880612/spring-boot-hibernate
+
+原專案為練習 hibernate。  
+後續被改為確認 hibernate createCriteria 與 createQuery 之間是否存在不同。  
+
+重要連結為:   
+https://docs.jboss.org/hibernate/orm/5.2/javadocs/deprecated-list.html  
+https://www.baeldung.com/hibernate-criteria-queries  
+https://docs.google.com/spreadsheets/d/17Dw9ThPsmKiD-LjpUnSm2-HuwAuBYttukfzvjVOTPpY/edit#gid=0  
+
+以下為原 README.md
+
 # Spring Boot, Hibernate, Oracle example: Build CRUD App
 Build a Spring Boot and Oracle database connection example that uses Hibernate, Spring Data JPA to make CRUD Operations. You'll know:
 - How to configure Spring Data, JPA, Hibernate to work with Oracle Database
